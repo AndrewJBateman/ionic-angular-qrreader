@@ -9,6 +9,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { Base64ToGallery } from '@ionic-native/base64-to-gallery/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -16,7 +19,9 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    BarcodeScanner,
+    Base64ToGallery
   ],
   bootstrap: [AppComponent]
 })
