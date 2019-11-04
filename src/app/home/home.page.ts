@@ -13,14 +13,18 @@ export class HomePage {
   scannedCode = null;
   elementType: 'url' | 'canvas' | 'img' = 'canvas';
 
-  constructor(private barcodeScanner: BarcodeScanner, private base64ToGallery: Base64ToGallery, private toastCtrl: ToastController) {}
+  constructor(
+    private barcodeScanner: BarcodeScanner,
+    private base64ToGallery: Base64ToGallery,
+    private toastCtrl: ToastController
+  ) {}
 
   scanCode() {
-   this.barcodeScanner.scan().then(
-     barcodeData => {
-       this.scannedCode = barcodeData.text;
-     }
-   );
+    this.barcodeScanner.scan().then(
+      barcodeData => {
+        this.scannedCode = barcodeData.text;
+      }
+    );
   }
 
   downloadQR() {
