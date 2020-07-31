@@ -1,51 +1,57 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>
-      Ionic Barcode Reader
-    </ion-title>
-  </ion-toolbar>
+	<ion-toolbar color="primary">
+		<ion-title>
+			Ionic Barcode Reader
+		</ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content>
+	<ion-item>
+		<ion-input type="text" placeholder="QR Code Scanner" [(ngModel)]="qrData">
+		</ion-input>
+	</ion-item>
 
-  <ion-item>
-    <ion-input type="text" placeholder="QR Code Scanner" [(ngModel)]="qrData">
+	<ion-segment [(ngModel)]="elementType">
+		<ion-segment-button value="canvas">
+			<ion-label>Canvas</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="img">
+			<ion-label>Image</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="url">
+			<ion-label>URL</ion-label>
+		</ion-segment-button>
+	</ion-segment>
 
-    </ion-input>
-  </ion-item>
+	<ion-button expand="full" (click)="scanCode()" color="secondary">
+		<ion-icon name="qe-scanner"></ion-icon>
+		Scan Code
+	</ion-button>
 
-  <ion-segment [(ngModel)]="elementType">
-    <ion-segment-button value="canvas">
-      <ion-label>Canvas</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="img">
-      <ion-label>Image</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="url">
-      <ion-label>URL</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+	<ion-card *ngIf="qrData" class="text-center">
+    <ngx-qrcode
+      [elementType]="elementType"
+			[value]="qrData"
+			qrc-class="my-code"
+		>
+		</ngx-qrcode>
+		<ion-card-content>
+			<ion-button
+				expand="full"
+				color="tertiary"
+				(click)="downloadQR()"
+				*ngIf="elementType === 'canvas'"
+			>
+				<ion-icon name="download" slot="start"></ion-icon>
+				Download QR Code
+			</ion-button>
+		</ion-card-content>
+	</ion-card>
 
-  <ion-button expand="full" (click)="scanCode()" color="secondary" >
-    <ion-icon name="qe-scanner"></ion-icon>
-    Scan Code
-  </ion-button>
-
-  <ion-card *ngIf="qrData" class="text-center">
-    <ngx-qrcode [qrc-value]="qrData" [qrc-element-type]="elementType" qrc-class="my-code">
-    </ngx-qrcode>
-    <ion-card-content>
-      <ion-button expand="full" color="tertiary" (click)="downloadQR()" *ngIf="elementType === 'canvas'">
-        <ion-icon name="download" slot="start"></ion-icon>
-        Download QR Code
-      </ion-button>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card *ngIf="scannedCode">
-    <ion-card-content>
-      Result of Scan: {{ scannedCode }}
-    </ion-card-content>
-  </ion-card>
-
+	<ion-card *ngIf="scannedCode">
+		<ion-card-content>
+			Result of Scan: {{ scannedCode }}
+		</ion-card-content>
+	</ion-card>
 </ion-content>
