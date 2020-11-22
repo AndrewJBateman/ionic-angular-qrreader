@@ -1,6 +1,7 @@
 # :zap: Ionic Angular QR Bar Code Reader
 
-* App created using the [Ionic 5 framework](https://ionicframework.com/docs) to use the [Angular component ngx-qrcode2: Quick Response bar code reader](https://www.npmjs.com/package/ngx-qrcode2). Another great tutorial from [Ionic Academy](https://ionicacademy.com/how-to-ion-picker-component/) **code updated to the latest QR bar code scanner version**.
+* App created using the [Ionic 5 framework](https://ionicframework.com/docs) to use the [Angular component ngx-qrcode2: Quick Response bar code reader](https://www.npmjs.com/package/ngx-qrcode2).
+* Another great tutorial from [Simon Grimm](https://www.youtube.com/channel/UCZZPgUIorPao48a1tBYSDgg) **code updated to the latest QR bar code scanner version**.
 
 ## :page_facing_up: Table of contents
 
@@ -19,6 +20,7 @@
 ## :books: General info
 
 * Generates QR bar codes from input text (a web address in this case) as the text is typed.
+* Note: [ngx-qrcode2](https://www.npmjs.com/package/ngx-qrcode2) has been deprecated. [@techiediaries/ngx-qrcode](https://www.npmjs.com/package/@techiediaries/ngx-qrcode) should be used instead.
 
 ## :camera: Screenshots
 
@@ -27,7 +29,7 @@
 ## :signal_strength: Technologies
 
 * [Ionic v5](https://ionicframework.com/)
-* [Angular v10](https://angular.io/)
+* [Angular v11](https://angular.io/)
 * [Ionic/angular v5](https://www.npmjs.com/package/@ionic/angular)
 * [Angular bar code reader component library ngx-qrcode2 v9](https://www.npmjs.com/package/ngx-qrcode2)
 * [Angular Reactive Extensions for JS, rxjs](https://angular.io/guide/rx-library) async function used to show a user message toast upon successful scan save operation (or error message if not).
@@ -37,6 +39,7 @@
 
 ## :floppy_disk: Setup
 
+* Run `npm i` to install dependencies
 * To start the server on _localhost://8100_ type: 'ionic serve'
 
 ## :computer: Code Examples
@@ -69,8 +72,8 @@
 
 ## :clipboard: Status & To-do list
 
-* Status: Working
-* To-do: Test in Android Studio
+* Status: Compiles in browser but Cordova build fails.
+* To-do: Fix Cordova build issue. Test in Android Studio
 
 ## :clap: Inspiration
 

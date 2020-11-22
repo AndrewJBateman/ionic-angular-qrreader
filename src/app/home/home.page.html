@@ -1,8 +1,6 @@
 <ion-header>
 	<ion-toolbar color="primary">
-		<ion-title>
-			Ionic Barcode Reader
-		</ion-title>
+		<ion-title> Ionic Barcode Reader </ion-title>
 	</ion-toolbar>
 </ion-header>
 
@@ -30,8 +28,8 @@
 	</ion-button>
 
 	<ion-card *ngIf="qrData" class="text-center">
-    <ngx-qrcode
-      [elementType]="elementType"
+		<ngx-qrcode
+			[elementType]="elementType"
 			[value]="qrData"
 			qrc-class="my-code"
 		>
@@ -50,8 +48,6 @@
 	</ion-card>
 
 	<ion-card *ngIf="scannedCode">
-		<ion-card-content>
-			Result of Scan: {{ scannedCode }}
-		</ion-card-content>
+		<ion-card-content> Result of Scan: {{ scannedCode }} </ion-card-content>
 	</ion-card>
 </ion-content>
