@@ -1,7 +1,8 @@
 # :zap: Ionic Angular QR Bar Code Reader
 
 * App created using the [Ionic 5 framework](https://ionicframework.com/docs) to use the [Angular component ngx-qrcode2: Quick Response bar code reader](https://www.npmjs.com/package/ngx-qrcode2).
-* Another great tutorial from [Simon Grimm](https://www.youtube.com/channel/UCZZPgUIorPao48a1tBYSDgg) **code updated to the latest QR bar code scanner version**.
+* Another great tutorial from [Simon Grimm](https://www.youtube.com/channel/UCZZPgUIorPao48a1tBYSDgg) 
+* **code updated to the latest QR bar code scanner version**.
 
 ## :page_facing_up: Table of contents
 
