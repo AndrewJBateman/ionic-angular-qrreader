@@ -23,7 +23,7 @@
 	</ion-segment>
 
 	<ion-button expand="full" (click)="scanCode()" color="secondary">
-		<ion-icon name="qe-scanner"></ion-icon>
+		<ion-icon name="barcode" slot="start" size="large"></ion-icon>
 		Scan Code
 	</ion-button>
 
@@ -41,7 +41,7 @@
 				(click)="downloadQR()"
 				*ngIf="elementType === 'canvas'"
 			>
-				<ion-icon name="download" slot="start"></ion-icon>
+				<ion-icon name="download" slot="start" size="large"></ion-icon>
 				Download QR Code
 			</ion-button>
 		</ion-card-content>
