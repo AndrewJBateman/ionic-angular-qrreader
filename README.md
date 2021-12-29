@@ -1,6 +1,6 @@
 # :zap: Ionic Angular QR Bar Code Reader
 
-* App created using the [Ionic 5 framework](https://ionicframework.com/docs) to use the [Angular component ngx-qrcode2: Quick Response bar code reader](https://www.npmjs.com/package/ngx-qrcode2).
+* App created using the [Ionic framework](https://ionicframework.com/docs) to use the [Angular component ngx-qrcode2: Quick Response bar code reader](https://www.npmjs.com/package/ngx-qrcode2).
 * Another great tutorial from [Simon Grimm](https://www.youtube.com/channel/UCZZPgUIorPao48a1tBYSDgg)
 * **code updated to the latest QR bar code scanner version**.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
@@ -36,9 +36,9 @@
 
 ## :signal_strength: Technologies
 
-* [Ionic v5](https://ionicframework.com/)
-* [Angular v12](https://angular.io/)
-* [Ionic/angular v5](https://www.npmjs.com/package/@ionic/angular)
+* [Ionic v6](https://ionicframework.com/)
+* [Angular v13](https://angular.io/)
+* [Ionic/angular v6](https://www.npmjs.com/package/@ionic/angular)
 * [Angular bar code reader component library ngx-qrcode2 v9](https://www.npmjs.com/package/ngx-qrcode2)
 * [Angular Reactive Extensions for JS, rxjs](https://angular.io/guide/rx-library) async function used to show a user message toast upon successful scan save operation (or error message if not).
 
@@ -80,8 +80,8 @@
 
 ## :clipboard: Status & To-do list
 
-* Status: Compiles in browser but Cordova build fails.
-* To-do: Fix Cordova build issue. Test in Android Studio
+* Status: Compiles in browser but needs to be tested on a mobile simulator
+* To-do: Test in Android Studio
 
 ## :clap: Inspiration
 
